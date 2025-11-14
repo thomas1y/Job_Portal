@@ -5,31 +5,21 @@ import CreateJob from "../Pages/CreateJob";
 import MyJobs from "../Pages/MyJobs";
 import SalaryPage from "../Pages/SalaryPage";
 import JobDetails from "../Pages/JobDetails";
-//import About from "../Pages/About";
+import Login from "../Pages/Login";
+import SignUp from "../Pages/SignUp";
 
 const router = createBrowserRouter([
     {
         path: "",
         element: <App/>,
         children: [
-            {path: "/",element: <Home/>},
-            {
-             path: "/post-job",
-             element: <CreateJob /> 
-            },
-            
-            {
-                path: "/my-job",
-                element: <MyJobs /> 
-               },
-               {
-                path: "/salary",
-                element: <SalaryPage /> 
-               },
-               {
-                path: "/job/:id",
-                element:<JobDetails />
-               }
+            {path: "/", element: <Home/>},
+            {path: "/post-job", element: <CreateJob />},
+            {path: "/my-job", element: <MyJobs />},
+            {path: "/salary", element: <SalaryPage />},
+            {path: "/job/:id", element: <JobDetails />},
+            {path: "/login", element: <Login />},
+            {path: "/sign-up", element: <SignUp />}
         ]
     },
 ]);
